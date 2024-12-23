@@ -1,17 +1,16 @@
 import base58
-import random
 import binascii
 import bip32utils
 import codecs
 import csv
-import os
-import sys
-import time
 import logging
-from mnemonic import Mnemonic
+import os
+import random
+import time
 from bit import Key
 from bit.format import bytes_to_wif
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from mnemonic import Mnemonic
 from shadePy import Colors
 
 
@@ -95,7 +94,6 @@ def authentication(valid_keys):
     else: 
         print(f"{RED}Error: Incorrect choice. Please enter '1' to Log in or '2' to Exit.{RESET}")
 
-# Chargement des mots et mnemonics
 with open(WORDS_FILE, 'r') as file:
     WORDS = file.read().splitlines()
 
@@ -111,7 +109,6 @@ def load_generated_mnemonics():
             print(f"\nTotal mnemonics loaded : {GREEN}{count}{RESET}")
     return generated_mnemonics
 
-# Générer des mnemonics uniques
 def GetUniqueMnemonic(len_seed, generated_mnemonics):
     while True:
         mnemonic = ' '.join(random.sample(WORDS, len_seed))
@@ -128,19 +125,15 @@ def PrivateKeyFromMnemonic(mnemonic):
     mne = Mnemonic("english")
     seed = mne.to_seed(mnemonic, passphrase="")
     Bip32_Root_Key_Object = bip32utils.BIP32Key.fromEntropy(seed)
-
     Bip32_Child_Key_Object = Bip32_Root_Key_Object.ChildKey(44 + bip32utils.BIP32_HARDEN).ChildKey(
         0 + bip32utils.BIP32_HARDEN).ChildKey(0 + bip32utils.BIP32_HARDEN).ChildKey(0).ChildKey(0)
-
     first_encode = base58.b58decode(Bip32_Child_Key_Object.WalletImportFormat())
     private_key_byte = binascii.hexlify(first_encode)
     private_key_hex = private_key_byte[2:-10]
     private_hex = private_key_hex.decode()
     byte_private = codecs.decode(private_hex, 'hex_codec')
-    
     wif_compressed = bytes_to_wif(byte_private, compressed=True)
     wif_uncompressed = bytes_to_wif(byte_private, compressed=False)
-    
     bit_com = Key(wif_compressed)
     bit_uncom = Key(wif_uncompressed)
     compressed_address = bit_com.address
@@ -156,7 +149,6 @@ def save_results_to_file(mnemonic, private_key, address):
     print(f"\n{GREEN}Wallet saved{RESET} in the file '{GREEN}Enjoy.txt{RESET}'")
     logging.info("Wallet saved to Enjoy.txt")
 
-# Recherche parallèle des adresses
 def search_for_target_address(len_seed, generated_mnemonics, display_attempts):
     target_address = '1K4ezpLybootYF23TM4a8Y4NyP7auysnRo'
     count = 0
