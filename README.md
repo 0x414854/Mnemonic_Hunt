@@ -4,7 +4,7 @@
 
 ## Project Description
 
-Welcome to the Mnemonic Hunt!
+Welcome to the **Mnemonic Hunt**!
 <br>This project is inspired by the Mnemonic Bitcoin Puzzle created by **CoinMonks** in 2019. **It offers a fascinating way to explore cryptographic concepts while aiming to claim a Bitcoin reward.**
 
 ## Table of Contents
@@ -22,7 +22,7 @@ Welcome to the Mnemonic Hunt!
   - [Install Required Packages](#install-required-packages)
   - [Generate License Key](#generate-license-key)
 - [Usage](#usage)
-- [Security and Ethics](#security-and-ethics)
+- [Security and Ethics](#🔐-security-and-ethics)
 - [Benchmarks](#benchmarks)
 - [Roadmap](#roadmap)
 - [Tree Directory](#tree-directory)
@@ -86,7 +86,7 @@ To participate, **extract the words from the article** and **reconstruct the mne
 ## Prerequisites
 
 - Python 3.11
-- Required Python libraries : _see [Installation](#installation)_
+- Required Python libraries (_see [Installation](#installation)_)
   - `mnemonic`
   - `bit`
   - `base58`
@@ -123,7 +123,7 @@ To participate, **extract the words from the article** and **reconstruct the mne
    python3 mnemonicHunt.py
    ```
 
-## Usage
+## **Usage**
 
 1. **Run the script**
 
@@ -132,10 +132,11 @@ To participate, **extract the words from the article** and **reconstruct the mne
    ```
 
 2. **Connect to the Bot**
-   <br><br>If the `license key` or `username` is not valid, **return to the home screen.** <br>If the authentication is incorrect **more than three times**, **the program will close**.
+   <br><br>**If the `license key` or `username` is not valid, **return to the home screen.**
+   <br>If the authentication is incorrect **more than three times**, **the program will close\*\*.
 
 3. **Display each attempt**
-   <br>choose whether to display each attempt or not when prompted then the search process begins automatically.
+   <br>Choose whether to display each attempt or not when prompted then the search process begins automatically.
 
 4. **Search begin !**
 
@@ -143,12 +144,27 @@ To participate, **extract the words from the article** and **reconstruct the mne
 
 - Matching mnemonics, private keys, and wallet addresses are saved in `utils/Enjoy.txt`.
 
-## Security and Ethics
+## 🔒 **Security and Ethics**
 
-This tool is designed for educational and ethical purposes only. Misuse of cryptographic tools may violate laws and ethical standards.
+### **Your Data is Safe**
 
----
+- All operations performed by **Mnemonic Hunt** are entirely local to your system.
+- The tool does not send or receive any data over the internet.
+- Sensitive files like `mnemonicHunt.log` and `users.csv` remain on your local machine.
 
+By keeping all processes offline, we ensure that **your data stays private and secure**.
+
+### ⚠️ **Disclaimer**
+
+**Mnemonic Hunt** is intended for :
+
+- Research purposes.
+- Educational use.
+- Solving Bitcoin puzzles and cryptographic challenges legally and ethically.
+
+**Misuse of this tool for unauthorized access or illegal purposes is strictly prohibited and may violate laws in your jurisdiction.**
+
+<!--
 ## Benchmarks
 
 Performance metrics:
@@ -156,56 +172,83 @@ Performance metrics:
 - Average mnemonics tested per second: 1000+ with multithreading.
 - Successful discovery time depends on the complexity of the phrase.
 
----
+--- -->
 
-## Roadmap
+## **Roadmap**
 
-- Add GPU support for faster processing.
+<!-- - Add GPU support for faster processing.
 - Expand wordlist compatibility.
-- Introduce a graphical user interface.
+- Introduce a graphical user interface. -->
 
----
+## **Tree Directory**
 
-## Tree Directory
+.
+<br>├── .gitignore
+<br>├── LICENSE
+<br>├── mnemonicHunt.py
+<br>├── README.md
+<br>├── requirements.txt
+<br>├── logs/
+<br>&nbsp;&nbsp;&nbsp;&nbsp;└── mnemonicHunt.log
+<br>└── utils/
+<br>&nbsp;&nbsp;&nbsp;&nbsp; ├── mnemonic.txt
+<br>&nbsp;&nbsp;&nbsp;&nbsp; ├── users.csv
+<br>&nbsp;&nbsp;&nbsp;&nbsp; └── words.txt
 
-```
-├── utils/
-│   ├── words.txt
-│   ├── users.csv
-│   └── Enjoy.txt
-├── logs/
-│   └── mnemonicHunt.log
-├── Results/
-└── main.py
-```
+## **Contributions**
 
----
+Contributions are welcome ! Feel free to open issues or submit pull requests.
 
-## Contributions
+## **Support the Project**
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+**Your support makes a huge difference !** This project is maintained with the energy, time, and passion of its contributors.
+<br>If you enjoy this project or want to help sustain its development, **consider making a donation**.
 
----
+### 🫶 Why Donate?
 
-## Support the Project
+- Help cover development and hardware costs.
+- Contribute to new features and improvements.
+- Support an open-source project to keep it free and accessible to everyone.
+- Enable the purchase of better hardware to create a computational pool for solving bitcoin puzzles.
 
-If you find this project helpful, consider supporting it by sharing or contributing.
+### 🪙 Cryptocurrency Wallets
 
----
+You can donate using the following cryptocurrency addresses:
+
+- **Bitcoin (BTC)** : `bc1q6n3ufauzjqgxztkklj3734cp0f7evqq3djh4ne`
+- **Ethereum (ETH)** : `0x24800123e8D51F1d596c6Abe4B5DB5A10837Fe8e`
+- **Bittensor (TAO)** : `5CrG7bKratZVocnxj66FF23AMVvqKHf7RSHfz49csEtJ2CuG`
+- **Dogecoin (DOGE)** : `DJQnasX39Unat3vkmyBMgp4H6Kfd4wFumF`
+- **Solana (SOL)** : `Gj9JkpFqdSabag8RiiNTmLaCiZrcxYa6pc4y599vft15`
+
+#### **USDT (Tether)**
+
+- **Binance Smart Chain (BEP-20)** : `0x24800123e8D51F1d596c6Abe4B5DB5A10837Fe8e`
+- **Ethereum (ERC-20)** : `0x24800123e8D51F1d596c6Abe4B5DB5A10837Fe8e`
+- **Tron (TRC-20)** : `THHcEQ8zG3ZnUXoHdBmCdpZ3AAqhoDbMpW`
+- **Solana (SPL)** : `Gj9JkpFqdSabag8RiiNTmLaCiZrcxYa6pc4y599vft15`
+
+#### **USDC (USD Coin)**
+
+- **Binance Smart Chain (BEP-20)**: `0x24800123e8D51F1d596c6Abe4B5DB5A10837Fe8e`
+- **Ethereum (ERC-20)**: `0x24800123e8D51F1d596c6Abe4B5DB5A10837Fe8e`
+- **Solana (SPL)**: `Gj9JkpFqdSabag8RiiNTmLaCiZrcxYa6pc4y599vft15`
+
+### 💬 A Big Thank You
+
+Thank you so much for your generosity. Your support truly means the world to us and motivates us to keep improving this project. 🙏
+
+**➡️ Take action now ! Every contribution, big or small, makes a huge impact.**
 
 ## Useful Links
 
-- [CoinMonks Blog](https://medium.com/coinmonks)
-- [Bitcoin Wallet Explorer](https://btcscan.org)
+- [CoinMonks Article](https://medium.com/coinmonks/securing-bitcoin-seed-phrases-in-stories-d8eb43a02254)
+- [Bitcoin Wallet Explorer](https://btcscan.org/address/1K4ezpLybootYF23TM4a8Y4NyP7auysnRo)
 
----
+## **License**
 
-## License
+This project is licensed under the **[MIT License](https://github.com/0x414854/Satoshi_Hunter/blob/main/LICENSE)**.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## **Author**
 
----
-
-## Author
-
-Developed by the CoinMonks team and powered by 0x414854.
+[**0x414854**](https://github.com/0x414854)
