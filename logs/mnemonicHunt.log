@@ -1,1 +1,6 @@
-
+2025-01-09 16:18:35,516 - INFO - Database './utils/mnemonic.db' initialized.
+2025-01-09 16:18:44,909 - INFO - Authentication successful
+2025-01-09 16:18:46,926 - INFO - Retrieving mnemonics from the database
+2025-01-09 16:19:20,053 - INFO - Total mnemonics loaded : 18726372
+2025-01-09 16:19:23,201 - INFO - 0 generated mnemonic
+2025-01-09 16:19:23,202 - INFO - 0 generated mnemonic

@@ -2,37 +2,37 @@
 
 # ⭐️ **Mnemonic Hunt©** ⭐️
 
-## Project Description
+## 📜 Project Description
 
 Welcome to the **Mnemonic Hunt** !
 <br>This project is inspired by the Mnemonic Bitcoin Puzzle created by **CoinMonks** in 2019. **It offers a fascinating way to explore cryptographic concepts while aiming to claim a Bitcoin reward.**
 
-## Table of Contents
+## 📚 Table of Contents
 
-- [Project Description](#project-description)
-- [Table of Contents](#table-of-contents)
-- [What is Mnemonic Bicoin Puzzle ?](#what-is-mnemonic-bitcoin-puzzle)
+- [📜 Project Description](#📜-project-description)
+- [📚 Table of Contents](#📚-table-of-contents)
+- [🧩 What is Mnemonic Bicoin Puzzle ?](#🧩-what-is-mnemonic-bitcoin-puzzle)
   - [Description](#description)
   - [History](#history)
   - [Rewards](#rewards)
   - [Hints](#hints)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
+- [✨ Features](#✨-features)
+- [🛠️ Prerequisites](#🛠️-prerequisites)
+- [⚙️ Installation](#⚙️ -installation)
   - [Install Required Packages](#install-required-packages)
   - [Generate License Key](#generate-license-key)
-- [Usage](#usage)
-- [Security and Ethics](#🔐-security-and-ethics)
-- [Benchmarks](#benchmarks)
-- [Roadmap](#roadmap)
-- [Tree Directory](#tree-directory)
-- [Contributions](#contributions)
-- [Support the Project](#support-the-project)
-- [Useful Links](#useful-links)
-- [License](#license)
-- [Author](#author)
+- [▶️ Usage](#▶️-usage)
+- [🔐 Security and Ethics](#🔐-security-and-ethics)
+- [📊 Benchmarks](#📊-benchmarks)
+- [🛣️ Roadmap](#🛣️-roadmap)
+- [🌳 Tree Directory](#🌳-tree-directory)
+- [🤝 Contributions](#🤝-contributions)
+- [💖 Support the Project](#💖-support-the-project)
+- [🔗 Useful Links](#🔗-useful-links)
+- [📄 License](#📄-license)
+- [👤 Author](#👤-author)
 
-## What is Mnemonic Bitcoin Puzzle ?
+## 🧩 What is Mnemonic Bitcoin Puzzle ?
 
 ### Description
 
@@ -52,7 +52,7 @@ Created by CoinMonks in 2019, this puzzle introduces an innovative method of emb
 
 To participate, **extract the words from the article** and **reconstruct the mnemonic phrase that unlocks the Bitcoin wallet.**
 
-## Features
+## ✨ Features
 
 - 🔍 **Specific Wallet Search**
   <br>_Find the mnemonic of a specific Bitcoin wallet._
@@ -61,7 +61,7 @@ To participate, **extract the words from the article** and **reconstruct the mne
   <br>_Generate mnemonics of various lengths (**12** and **24 words**)._
 
 - 🆕 **Unique Mnemonic Generation**
-  <br>_Generates unique mnemonics and records each attempt in a SQLitedatabase to avoid duplication, ensuring no repetition even after restarting the program._
+  <br>_Generates unique mnemonics and records each attempt in a SQLite database to avoid duplication, ensuring no repetition even after restarting the program._
 
 - 🧠 **Previously Generated Mnemonics**
   <br>_Handling Loads and skips mnemonics that have already been generated to ensure a unique search._
@@ -81,7 +81,7 @@ To participate, **extract the words from the article** and **reconstruct the mne
 - 💻 **Cross-Platform Compatibility**
   <br>_Works on Mac, Windows, and Linux._
 
-## Prerequisites
+## 🛠️ Prerequisites
 
 - Python 3.11
 - Required Python libraries (_see [Installation](#installation)_)
@@ -91,7 +91,7 @@ To participate, **extract the words from the article** and **reconstruct the mne
   - `mnemonic`
   - `shadePy`
 
-## Installation
+## ⚙️ Installation
 
 1. **Clone this repository to your machine**
 
@@ -122,7 +122,7 @@ To participate, **extract the words from the article** and **reconstruct the mne
    python3 mnemonicHunt.py
    ```
 
-## **Usage**
+## ▶️ Usage
 
 1. **Run the script**
 
@@ -173,14 +173,14 @@ Performance metrics:
 
 --- -->
 
-## **Roadmap**
+## 🛣️ Roadmap
 
-- [ ] 💾 **Enable sharing generated mnemonic**
+- [ ] 💾 `Enable sharing generated mnemonic`
 - [ ] `Optimize private key calculations`
 - [ ] `Optimize threading`
-- ✅ `Manage mnemonics in a SQLite database`
+- ✅ `Manage mnemonics in SQLite database`
 
-## **Tree Directory**
+## 🌳 Tree Directory
 
 .
 <br>├── .gitignore
@@ -197,23 +197,25 @@ Performance metrics:
 <br>└── 📁 (ENJOY)/
 <br>&nbsp;&nbsp;&nbsp;&nbsp; └── Enjjoy.txt
 
-## **Contributions**
+## 🤝 Contributions
 
 Contributions are welcome ! Feel free to open issues or submit pull requests.
 
-## **Support the Project**
+## 💖 Support the Project
+
+**Giving it a star on GitHub ⭐**
 
 **Your support makes a huge difference !** This project is maintained with the energy, time, and passion of its contributors.
 <br>If you enjoy this project or want to help sustain its development, **consider making a donation**.
 
-### 🫶 Why Donate ?
+### Why Donate ? 🫶
 
 - Help cover development and hardware costs.
 - Contribute to new features and improvements.
 - Support an open-source project to keep it free and accessible to everyone.
 - Enable the purchase of better hardware to create a computational pool for solving bitcoin puzzles.
 
-### 🪙 Cryptocurrency Wallets
+### Cryptocurrency Wallets 🪙
 
 You can donate using the following cryptocurrency addresses:
 
@@ -242,15 +244,15 @@ Thank you so much for your generosity. Your support truly means the world to us 
 
 **➡️ Take action now ! Every contribution, big or small, makes a huge impact.**
 
-## Useful Links
+## 🔗 Useful Links
 
 - [CoinMonks Article](https://medium.com/coinmonks/securing-bitcoin-seed-phrases-in-stories-d8eb43a02254)
 - [Bitcoin Wallet Explorer](https://btcscan.org/address/1K4ezpLybootYF23TM4a8Y4NyP7auysnRo)
 
-## **License**
+## 📄 License
 
 This project is licensed under the **[MIT License](https://github.com/0x414854/Mnemonic_Hunt/blob/main/LICENSE)**.
 
-## **Author**
+## 👤 Author
 
 [**0x414854**](https://github.com/0x414854)

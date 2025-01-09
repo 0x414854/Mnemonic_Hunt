@@ -11,9 +11,11 @@ import sqlite3
 from bit import Key
 from bit.format import bytes_to_wif
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from dotenv import load_dotenv
 from mnemonic import Mnemonic
 from shadePy import Colors
-from dotenv import load_dotenv
+from tqdm import tqdm
+
 
 
 GREEN, RED, BLUE, CYAN, BRIGHT_GREY, YELLOW, RESET = (
@@ -118,10 +120,20 @@ def load_generated_mnemonics():
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
     cursor.execute("SELECT mnemonic FROM mnemonics")
-    generated_mnemonics = {row[0] for row in cursor.fetchall()}
+    print(f"{YELLOW}Retrieving mnemonics...{RESET}")
+    logging.info("Retrieving mnemonics from the database")
+    rows = cursor.fetchall()
+    total_mnemonics = len(rows)
+
+    generated_mnemonics = set()
+    for row in tqdm(rows, desc="Loading mnemonics ", unit="mnemonic"):
+        generated_mnemonics.add(row[0])
+    
     conn.close()
-    print(f"\nTotal mnemonics loaded : {YELLOW}{len(generated_mnemonics)}{RESET}")
+    print(f"\nTotal mnemonics loaded : {YELLOW}{total_mnemonics}{RESET}")
+    logging.info(f"Total mnemonics loaded : {total_mnemonics}")
     return generated_mnemonics
+
 
 
 def GetUniqueMnemonic(len_seed, generated_mnemonics):
@@ -187,7 +199,6 @@ def search_for_target_address(len_seed, generated_mnemonics, display_attempts):
         else:
             if count % 1000000 == 0:
                 print(f"\n{BRIGHT_GREY}Generated Mnemonic {YELLOW}{count}{RESET}...", end='\r')
-            if count % 1000000 == 0:
                 logging.info(f"{count} generated mnemonic")
 
         save_mnemonic_to_db(mnemonic)
