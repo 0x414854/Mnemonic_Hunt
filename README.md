@@ -18,7 +18,7 @@ Welcome to the **Mnemonic Hunt** !
   - [Hints](#hints)
 - [✨ Features](#✨-features)
 - [🛠️ Prerequisites](#🛠️-prerequisites)
-- [⚙️ Installation](#⚙️ -installation)
+- [⚙️ Installation](#⚙️-installation)
   - [Install Required Packages](#install-required-packages)
   - [Generate License Key](#generate-license-key)
 - [▶️ Usage](#▶️-usage)
@@ -149,7 +149,7 @@ To participate, **extract the words from the article** and **reconstruct the mne
 
 - All operations performed by **Mnemonic Hunt** are entirely local to your system.
 - The tool does not send or receive any data over the internet.
-- Sensitive files like `mnemonicHunt.log` and `users.csv` remain on your local machine.
+- Sensitive files like `mnemonic.db`, `mnemonicHunt.log` and `users.csv` remain on your local machine.
 
 By keeping all processes offline, we ensure that **your data stays private and secure**.
 
@@ -175,7 +175,7 @@ Performance metrics:
 
 ## 🛣️ Roadmap
 
-- [ ] 💾 `Enable sharing generated mnemonic`
+- [ ] `Enable sharing generated mnemonic`
 - [ ] `Optimize private key calculations`
 - [ ] `Optimize threading`
 - ✅ `Manage mnemonics in SQLite database`
@@ -195,7 +195,7 @@ Performance metrics:
 <br>&nbsp;&nbsp;&nbsp;&nbsp; ├── users.csv
 <br>&nbsp;&nbsp;&nbsp;&nbsp; └── words.txt
 <br>└── 📁 (ENJOY)/
-<br>&nbsp;&nbsp;&nbsp;&nbsp; └── Enjjoy.txt
+<br>&nbsp;&nbsp;&nbsp;&nbsp; └── (Enjjoy.txt)
 
 ## 🤝 Contributions
 

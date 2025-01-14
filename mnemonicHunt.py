@@ -56,17 +56,20 @@ def getClear():
 
 
 def init_db():
-    conn = sqlite3.connect(DB_FILE)
-    cursor = conn.cursor()
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS mnemonics (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            mnemonic TEXT UNIQUE
-        )
-    """)
-    conn.commit()
-    conn.close()
-    logging.info(f"Database '{DB_FILE}' initialized.")
+    if os.path.exists(DB_FILE):
+        logging.info(f"Database file '{DB_FILE}' already exists.")
+    else:
+        conn = sqlite3.connect(DB_FILE)
+        cursor = conn.cursor()
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS mnemonics (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                mnemonic TEXT UNIQUE
+            )
+        """)
+        conn.commit()
+        conn.close()
+        logging.info(f"Database '{DB_FILE}' initialized.")
 
 def load_license_keys():
     with open(USER_FILE, 'r') as file:
@@ -84,7 +87,6 @@ def authentication(valid_keys):
         getClear()
         license_key = input(f"{BRIGHT_GREY}Enter license key : {RESET}")
         print(f"{YELLOW}Verifying informations...Please wait{RESET}")
-        time.sleep(1)
         if authenticate(license_key, valid_keys):
             print(f"{GREEN}Authentication successful!{RESET}")
             logging.info("Authentication successful")
@@ -191,7 +193,7 @@ def search_for_target_address(len_seed, generated_mnemonics, display_attempts):
         if target_address in (compressedAddress, uncompressedAddress):
             print(f"{GREEN}Target Address found !{RESET}")
             save_results_to_file(mnemonic, private_key, compressedAddress)
-            logging.info("Target address found")
+            logging.info("Target address found !")
             return True
 
         if display_attempts:
@@ -221,7 +223,7 @@ def main():
         authenticated = authentication(valid_keys)
         
     generated_mnemonics = load_generated_mnemonics()
-    display_attempts = input(f"{BRIGHT_GREY}Display each attempt? (y/n) : {RESET}").lower() == 'y'
+    display_attempts = input(f"{BRIGHT_GREY}Display each attempt ? (y/n) : {RESET}").lower() == 'y'
     print(f"{YELLOW}The search will begin...{RESET}")
     len_seeds = [12, 24]
     parallel_search(generated_mnemonics, len_seeds, display_attempts)
